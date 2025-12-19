@@ -5,7 +5,11 @@ url = "https://webscraper.io/test-sites/e-commerce/static/computers/laptops"
 res = requests.get(url)
 
 bs = BeautifulSoup(res.text)
+<<<<<<< HEAD
 print(bs)
+=======
+# print(bs)
+>>>>>>> 970900cafeb843dc1843c8f8ff6690da27e67a56
 entire = bs.select("div.col-lg-9 > div.row div.col-md-4.col-xl-4.col-lg-4")
 print(len(entire))
 

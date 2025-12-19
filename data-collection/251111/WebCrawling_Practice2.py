@@ -20,8 +20,12 @@ data = []
 for page in range(1,20) :
     url =  f'https://webscraper.io/test-sites/e-commerce/static/computers/laptops?page={page}'
     response = requests.get(url) # 해당 URL에 대해 요청을 하고, 응답을 받는다
+<<<<<<< HEAD
     bs = BeautifulSoup(response.text) 
     # print(bs) # 각 상품이 <div class="col-md-4 col-xl-4 col-lg-4">으로 감싸져 있음 
+=======
+    bs = BeautifulSoup(response.text)
+>>>>>>> 970900cafeb843dc1843c8f8ff6690da27e67a56
     entire = bs.select("div.col-lg-9 > div.row div.col-md-4.col-xl-4.col-lg-4")
 # print(entire) # 잘 파싱했는지 확인(1)
 
@@ -50,8 +54,14 @@ for page in range(1,20) :
         })
     time.sleep(1)
 
+<<<<<<< HEAD
 for product in data:
     print(product)
     print()
+=======
+for i in data :
+    print(data)
+    print("==============")
+>>>>>>> 970900cafeb843dc1843c8f8ff6690da27e67a56
 
 print(len(data))
